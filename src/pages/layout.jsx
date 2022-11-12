@@ -1,7 +1,6 @@
 import Nav from './../components/nav.jsx';
 import Footer from './../components/footer.jsx';
 
-
 function Layout({children}) {
     return (
         <>

@@ -1,0 +1,31 @@
+/*==============slide transition===============*/
+.carousel-item {
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+    transition: opacity 0s 1s;
+}
+
+.morph-shape > svg {
+    transform: rotate3d(1, 0, 0, 180deg);
+}
+
+/*=================Blog view style =============================*/
+.blog-view img {
+    display: block;
+}
+
+.blog-view a {
+    display: block;
+}
+
+/*==================Page Setting===========================*/
+.customed-link {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+    --bs-nav-link-padding-y: 0 !important;
+}

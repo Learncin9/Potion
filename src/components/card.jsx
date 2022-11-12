@@ -1,32 +1,39 @@
+import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+
 import "./../css/font.css";
 import "./../css/animation.css";
 
-function Card({ title, img, description, btn }) {
+function C_Card({ img, btn }) {
+    let ReactMovePage = useNavigate();
+
+    let isMobileMode = false;
+    if (document.body.offsetWidth <= 600) {
+        //if it is mobile view
+        isMobileMode = true;
+    }
+
     return (
-        <div
-            className="card hover-up"
-            style={{ display: "inline-block", minHeight: "0" }}
-        >
-            <img src={img.link} className="card-img-top" alt={img.alt} />
-            <div className="card-body mobile-font">
-                <h1 className="card-title" style={{ fontWeight: "bolder" }}>
-                    {title}
-                </h1>
-                <p className="card-text">{description}</p>
-
-                <div
-                    style={{ color: "rgb(53, 53, 223)", marginBottom: "7px" }}
-                    id="hashtag"
+        <Card className="hover-zoomin-parent">
+            <Card.Img
+                variant="top"
+                src={img.link}
+                alt={img.alt}
+                className={isMobileMode ? null : "hover-zoomin"}
+            />
+            <Card.Body>
+                <Button
+                    variant="primary"
+                    onClick={() => {
+                        ReactMovePage(btn.link);
+                    }}
                 >
-                    #hash
-                </div>
-
-                <a href={btn.link} className="btn btn-primary">
                     {btn.text}
-                </a>
-            </div>
-        </div>
+                </Button>
+            </Card.Body>
+        </Card>
     );
 }
 
-export default Card;
+export default C_Card;

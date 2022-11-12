@@ -1,7 +1,11 @@
-.hover-up {
+.hover-zoomin-parent {
+    overflow: hidden;
+}
+
+.hover-zoomin {
     transition: 1s;
 }
 
-.hover-up:hover {
-    transform: translateY(-10px);
+.hover-zoomin:hover {
+    transform: scale(1.1);
 }
