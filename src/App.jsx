@@ -3,7 +3,7 @@ import { DNSlink } from "./context/DNS-link.jsx";
 
 import Home from "./pages/home.jsx";
 import BlogList from "./pages/blog-list.jsx";
-import "./css/App.css";
+import BlogView from "./pages/blog-view";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ScrollToTop = () => {
@@ -21,6 +21,7 @@ function App() {
                     <ScrollToTop />
                     <Routes>
                         <Route path="/blog" element={<BlogList />} />
+                        <Route path="/blog/:id" element={<BlogView />} />
                         <Route path="/" element={<Home />} />
                     </Routes>
                 </Router>

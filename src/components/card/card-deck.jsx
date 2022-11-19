@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import "./../css/layout.css";
+import "./../../css/layout.css";
 
-import { DNSlink } from "../context/DNS-link";
+import { DNSlink } from "./../../context/DNS-link";
 import { useContext } from "react";
 
 import Card from "./card.jsx";
@@ -19,7 +19,7 @@ function CardDeck({ deckTitle, deckLink }) {
         SetViewData([
             {
                 img: {
-                    link: "https://i.ytimg.com/vi/B7HaMN_mcKk/maxresdefault.jpg",
+                    link: homeDNS + "static/blog-header.png",
                     alt: "Very very happy woman",
                 },
                 btn: {
@@ -29,7 +29,7 @@ function CardDeck({ deckTitle, deckLink }) {
             },
             {
                 img: {
-                    link: "",
+                    link: homeDNS + "static/blog-header.png",
                     alt: "Very very happy woman",
                 },
                 btn: {
@@ -39,7 +39,7 @@ function CardDeck({ deckTitle, deckLink }) {
             },
             {
                 img: {
-                    link: "",
+                    link: homeDNS + "static/blog-header.png",
                     alt: "Very very happy woman",
                 },
                 btn: {

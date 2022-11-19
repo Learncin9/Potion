@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { DNSlink } from "../context/DNS-link";
+import { DNSlink } from "../../context/DNS-link";
 import { useContext } from "react";
 
 const JoinButton = () => {

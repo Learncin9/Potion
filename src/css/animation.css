@@ -3,9 +3,9 @@
 }
 
 .hover-zoomin {
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .hover-zoomin:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }

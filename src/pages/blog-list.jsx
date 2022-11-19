@@ -1,29 +1,46 @@
 import { useEffect, useContext } from "react";
-import { DNSlink } from "../context/DNS-link";
+import { DNSlink } from "./../context/DNS-link";
 import { useState } from "react";
 
-import Layout from "./layout";
-import FilterList from "./../components/filter-list";
+import Layout from "./../components/layout/layout";
+import FilterList from "../components/List/filter-list";
+import HorizontalCard from "./../components/List/texted-list-element";
 
 import "./../css/layout.css";
 
 function BlogList() {
     const homeDNS = useContext(DNSlink);
-    const [viewData, SetViewData] = useState(null);
+
+    const [dataList, SetDataList] = useState({ data: new Array(0) });
 
     useEffect(() => {
-        fetch(homeDNS + "static/blog/00001.json")
+        fetch(homeDNS + "blog-list")
             .then((response) => response.json())
-            .then((data) => {
-                SetViewData(data);
-                console.log(data);
-            });
+            .then((blogList) => {
+                SetDataList({ data: blogList.data });
+            })
+            .catch((err) => console.error(err));
     }, []);
 
     return (
         <Layout>
             <div className="layout-spread">
-                <FilterList />
+                <FilterList>
+                    {dataList.data.map((item, index) => {
+                        return (
+                            <HorizontalCard
+                                title={item.title}
+                                hash={item.hash}
+                                btn={{
+                                    link: item.btn.link,
+                                    text: item.btn.text,
+                                }}
+                                key={index}
+                                index={null}
+                            />
+                        );
+                    })}
+                </FilterList>
             </div>
         </Layout>
     );

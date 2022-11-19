@@ -1,10 +1,10 @@
-import Layout from "./layout.jsx";
+import Layout from "./../components/layout/layout";
 import "./../css/layout.css";
 
 import { useContext } from "react";
 import { DNSlink } from "./../context/DNS-link.jsx";
 
-import CardDeck from "./../components/card-deck.jsx";
+import CardDeck from "./../components/card/card-deck.jsx";
 import Slide from "./../components/slide";
 
 function Home() {

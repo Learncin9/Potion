@@ -6,6 +6,14 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
+const customedLink = {
+    marginTop: "0",
+    marginLeft: "0",
+    marginRight: "0",
+    marginBottom: "15px",
+    textDecoration: "none",
+    color: "black",
+};
 function OffcanvasExample() {
     return (
         <>
@@ -57,30 +65,18 @@ function OffcanvasExample() {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                                    <Nav.Link
-                                        className="customed-link"
-                                        href="/"
-                                    >
+                                    <Link style={customedLink} to="/">
                                         Home
-                                    </Nav.Link>
-                                    <Nav.Link
-                                        className="customed-link"
-                                        href="/game"
-                                    >
+                                    </Link>
+                                    <Link style={customedLink} to="/game">
                                         Games
-                                    </Nav.Link>
-                                    <Nav.Link
-                                        className="customed-link"
-                                        href="/blog"
-                                    >
+                                    </Link>
+                                    <Link style={customedLink} to="/blog">
                                         Blogs
-                                    </Nav.Link>
-                                    <Nav.Link
-                                        className="customed-link"
-                                        href="/etc"
-                                    >
+                                    </Link>
+                                    <Link style={customedLink} to="/etc">
                                         Etc
-                                    </Nav.Link>
+                                    </Link>
                                     <hr />
                                     <NavDropdown
                                         title="Reference"

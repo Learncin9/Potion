@@ -1,17 +1,13 @@
 .layout-spread {
     width: 90vw;
 
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: auto;
 }
 
 .layout-blog {
-    width: 60vw;
+    width: 75vw;
 
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: auto;
 }
 
 @media screen and (max-width: 768px) {
